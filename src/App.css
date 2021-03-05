@@ -1,0 +1,22 @@
+.navbar {
+	padding: 20px;
+	justify-content: center;
+	background-color: rgb(223, 223, 223);
+}
+.searchForm {
+	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+}
+.card {
+	display: inline-flex;
+	flex-direction: row;
+	gap: 20px;
+	padding: 20px 20px 60px 60px;
+}
+.loadCard {
+	padding-left: 40%;
+}
+.errorBox {
+	padding-left: 39%;
+}

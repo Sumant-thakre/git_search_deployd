@@ -32,13 +32,13 @@ command: npm start
 
 1.![HomeScreen](https://user-images.githubusercontent.com/20232034/110206556-69d16900-7ea4-11eb-9819-0e3dc24ac180.png)
 
-2.![SearchUserName](https://user-images.githubusercontent.com/20232034/110206569-87063780-7ea4-11eb-943d-4965c9cb13e2.png)
+2.![SearchUserName](https://user-images.githubusercontent.com/20232034/110206733-90dc6a80-7ea5-11eb-9ebb-3a5eae712c27.png)
 
-3.![LoadOnclickSearch](https://user-images.githubusercontent.com/20232034/110206574-8f5e7280-7ea4-11eb-8814-47c41d8c9aee.png)
+3.![LoadOnclickSearch](https://user-images.githubusercontent.com/20232034/110206742-9fc31d00-7ea5-11eb-8faa-ab885a2ce576.png)
 
-4.![SearchResult](https://user-images.githubusercontent.com/20232034/110206578-971e1700-7ea4-11eb-93fe-7fea20a43f26.png)
+4.![SearchResult](https://user-images.githubusercontent.com/20232034/110206747-a9e51b80-7ea5-11eb-8685-a471d2890925.png)
 
-5.![repositoryDetails](https://user-images.githubusercontent.com/20232034/110206584-9dac8e80-7ea4-11eb-9aed-ffedd8375cec.png)
+5.![repositoryDetails](https://user-images.githubusercontent.com/20232034/110206767-be291880-7ea5-11eb-9235-57f2554999d3.png)
 
 
 

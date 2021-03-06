@@ -38,7 +38,8 @@ const RepositoryDetails = (props) => {
 									Default Branch : {repoModalDetails.default_branch}
 								</Header>
 								<Header as="h4">
-									Created at : {repoModalDetails.created_at}
+									Created at :{" "}
+									{new Date(repoModalDetails.created_at).toDateString()}
 								</Header>
 								<Header as="h4">Size : {repoModalDetails.size}</Header>
 								<Header as="h4">Forks : {repoModalDetails.forks}</Header>

@@ -20,3 +20,7 @@
 .errorBox {
 	padding-left: 39%;
 }
+.initialMessage {
+	padding: 60px 60px 60px 60px;
+	text-align: center;
+}

@@ -18,10 +18,14 @@ const SearchHome = () => {
 	const [userInput, setUserInput] = useState(null);
 	const [error, setError] = useState(false);
 	const [load, setLoad] = useState(false);
+	const [disabled, setDisabled] = useState(true);
 
 	const handleInput = (e) => {
+		setDisabled(false);
 		if (e.target.value === "") {
 			setData([]);
+			error && setError(false);
+			setDisabled(true);
 		}
 		setUserInput(e.target.value);
 	};
@@ -68,14 +72,28 @@ const SearchHome = () => {
 				<Form onSubmit={handleClick}>
 					<Form.Group>
 						<Form.Input
+							focus
 							placeholder={constants.gitHubUserName}
 							name="gitHubUser"
 							onChange={handleInput}
 						/>
-						<Form.Button content="Search" onClick={handleClick} />
+						<Form.Button
+							primary
+							color="grey"
+							disabled={disabled}
+							content="Search"
+							onClick={handleClick}
+						/>
 					</Form.Group>
 				</Form>
 			</div>
+			{disabled && (
+				<div className="initialMessage">
+					<Message compact info>
+						{constants.welcome}
+					</Message>
+				</div>
+			)}
 			{load ? (
 				<Loader active inline="centered" />
 			) : error ? (

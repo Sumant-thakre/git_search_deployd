@@ -19,7 +19,7 @@ command : npm install
 3. After adding all the dependencies you're ready to launch the application
 command: npm start
 
-## `Container and Components Introduction`
+## `Container and Components Introduction` :
 
 ### Container
 1. SearchHome.js : This container is hosts the overall layout of the application. It hosts the Search bar, UserDetails and RepositoryDetails components.
@@ -27,3 +27,19 @@ command: npm start
 ### Componets
 1. UserDetails.js : This component is responsible to show the deatils of the user searched. 
 2. RepositoryDetails.js : This component is responsible to show the repository details of the selected repository from the list.
+
+## `Application Flow`:
+
+1.![HomeScreen](https://user-images.githubusercontent.com/20232034/110206556-69d16900-7ea4-11eb-9819-0e3dc24ac180.png)
+
+2.![SearchUserName](https://user-images.githubusercontent.com/20232034/110206569-87063780-7ea4-11eb-943d-4965c9cb13e2.png)
+
+3.![LoadOnclickSearch](https://user-images.githubusercontent.com/20232034/110206574-8f5e7280-7ea4-11eb-8814-47c41d8c9aee.png)
+
+4.![SearchResult](https://user-images.githubusercontent.com/20232034/110206578-971e1700-7ea4-11eb-93fe-7fea20a43f26.png)
+
+5.![repositoryDetails](https://user-images.githubusercontent.com/20232034/110206584-9dac8e80-7ea4-11eb-9aed-ffedd8375cec.png)
+
+
+
+

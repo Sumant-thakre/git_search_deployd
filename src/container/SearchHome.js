@@ -69,7 +69,7 @@ const SearchHome = () => {
 	return (
 		<React.Fragment>
 			<div className="searchForm">
-				<Form onSubmit={handleClick}>
+				<Form>
 					<Form.Group>
 						<Form.Input
 							focus

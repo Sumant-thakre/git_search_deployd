@@ -7,14 +7,17 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const SearchHome = () => {
-	const [name, setName] = useState(null);
-	const [login, setLogin] = useState(null);
-	const [avatar_url, setAvatar] = useState(null);
-	const [followers, setFollowers] = useState(null);
-	const [following, setFollowings] = useState(null);
+	const [stateDetails, setStateDetails] = useState({
+		id: 0,
+		name: null,
+		login: null,
+		avatar_url: null,
+		followers: 0,
+		following: 0,
+		bio: null,
+		email: null,
+	});
 	const [repos, setRepos] = useState(null);
-	const [bio, setBio] = useState(null);
-	const [email, setEmail] = useState(null);
 	const [userInput, setUserInput] = useState(null);
 	const [error, setError] = useState(false);
 	const [load, setLoad] = useState(false);
@@ -23,7 +26,7 @@ const SearchHome = () => {
 	const handleInput = (e) => {
 		setDisabled(false);
 		if (e.target.value === "") {
-			setData([]);
+			setData({});
 			error && setError(false);
 			setDisabled(true);
 		}
@@ -48,22 +51,18 @@ const SearchHome = () => {
 			});
 	};
 
-	const setData = ({
-		name,
-		avatar_url,
-		login,
-		bio,
-		email,
-		followers,
-		following,
-	}) => {
-		setName(name);
-		setAvatar(avatar_url);
-		setLogin(login);
-		bio ? setBio(bio) : setBio(constants.noSpecify);
-		email ? setEmail(email) : setEmail(constants.noSpecify);
-		setFollowers(followers);
-		setFollowings(following);
+	const setData = (data) => {
+		setStateDetails({
+			...stateDetails,
+			id: data.id,
+			name: data.name,
+			login: data.login,
+			avatar_url: data.avatar_url,
+			followere: data.followers,
+			folloeing: data.following,
+			bio: data.bio || constants.noSpecify,
+			email: data.email || constants.noSpecify,
+		});
 	};
 
 	return (
@@ -101,22 +100,17 @@ const SearchHome = () => {
 					<Message compact>{constants.WrongUserName}</Message>
 				</div>
 			) : (
-				login && (
+				stateDetails.id && (
 					<div className="card">
-						<UserDetails
-							userDetails={{
-								name,
-								login,
-								avatar_url,
-								followers,
-								following,
-								email,
-								bio,
-							}}
-						/>
 						<div>
-							{name && (
-								<RepositoryDetails repositoryDetails={{ name, repos }} />
+							<UserDetails userDetails={stateDetails} />
+						</div>
+						<div>
+							{stateDetails.id && (
+								<RepositoryDetails
+									repositoryDetails={stateDetails}
+									repos={repos}
+								/>
 							)}
 						</div>
 					</div>

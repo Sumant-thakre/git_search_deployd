@@ -7,7 +7,8 @@ import constants from "../constants";
 const RepositoryDetails = (props) => {
 	const [repoModalDetails, setRepoModalDetails] = useState(null);
 	const [open, setOpen] = useState(false);
-	const { name, repos } = props.repositoryDetails;
+	const { name } = props.repositoryDetails;
+	const repos = props.repos;
 	const repoDetails = repos.map((repo) => {
 		return (
 			<Modal
@@ -67,13 +68,15 @@ const RepositoryDetails = (props) => {
 		<>
 			{size(repos) ? (
 				<>
-					<Header as="h2">
-						{name.split(" ").slice(-1).join(" ")}'s Repositories
-					</Header>
+					<Header as="h2">{name.split(" ")[0]}'s Repositories</Header>
 					<Card.Group>{repoDetails}</Card.Group>
 				</>
 			) : (
-				<Message compact>{constants.noRepoMessage}</Message>
+				<div className="noRepo">
+					<div>
+						<Message info>{constants.noRepoMessage}</Message>
+					</div>
+				</div>
 			)}
 		</>
 	);

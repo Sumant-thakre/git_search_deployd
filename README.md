@@ -28,6 +28,20 @@ command: npm start
 1. UserDetails.js : This component is responsible to show the deatils of the user searched. 
 2. RepositoryDetails.js : This component is responsible to show the repository details of the selected repository from the list.
 
+## `Libraries` :
+
+Apart from ReactJs library, The app uses multiple third party libraries for various purposes.
+
+1. Semantic UI React:
+  The application uses Semantic UI React library to ensure the user interface should be simple, easy to understand yet looks great. 
+  The library blends perfectly with React.
+
+2. Axios:
+  To fetch the data from GitHub REST APIs, application uses axios library. Data fetched through axios is in JSON form and doesn'yt need further processing
+
+3. lodash:
+  lodash is used for various logical operations in the code such as iteration, size check, etc. 
+
 ## `Application Flow`:
 
 1.![HomeScreen](https://user-images.githubusercontent.com/20232034/110206556-69d16900-7ea4-11eb-9819-0e3dc24ac180.png)
